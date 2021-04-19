@@ -1,0 +1,32 @@
+[[extend 'layout.html']]
+
+<div class="section">
+  <div class="vars">
+      
+      <table class="styled-table">
+    <thead>
+        <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Avg.Rating</th>
+            <th>Location</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        [[for row in rows:]]
+    <tr>
+      <td><img class="rounded-circle account-img" src="images/[[=row.profile.image]]" style="
+    width: 76px;"></td>
+      <td>[[=row.auth_user.first_name]] [[=row.auth_user.last_name]]</td>
+      <td>[[=row.auth_user.avgrating]]</td>
+      <td>[[=row.auth_user.location]]</td>
+      <td> <a role="button" href="../profiledetails/[[=row.auth_user.id]]">Details</a></td>
+    </tr>
+    [[pass]]
+
+    </tbody>
+</table>
+      
+  </div>
+</div>

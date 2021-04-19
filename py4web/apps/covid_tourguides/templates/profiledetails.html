@@ -1,0 +1,27 @@
+[[extend 'layout.html']]
+
+<div class="section">
+  <div class="vars">
+      <img class="rounded-circle account-img" src="images/[[=row.profile.image]]" style="width: 176px;
+    /* align-content: center; */
+    /* vertical-align: top; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;" </img>
+   </div>
+   
+<h4>Name</h4>
+<p>[[=row.auth_user.first_name]] [[=row.auth_user.last_name]]</p>
+<h4>Average Rating</h4>
+<p>[[=row.auth_user.avgrating]]</p>
+<h4>Service Portfolio</h4>
+<p>[[=row.auth_user.portfolio]]</p>
+<h4>Location</h4>
+<p>[[=row.auth_user.location]]</p>
+<br>
+<br>
+<a role="button" href="mailto: [[=row.auth_user.email]]">Book Me!</a>
+
+   
+   
+</div>
