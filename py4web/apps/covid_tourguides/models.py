@@ -42,6 +42,10 @@ db.define_table(
 db.profile.id.readable = False
 db.profile.id.writable = False
 
+db.auth_user.avgrating.readable = False
+db.auth_user.avgrating.writable = False
+
+
 
 #
 db.commit()
